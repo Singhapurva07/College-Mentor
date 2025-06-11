@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced College Course Mentor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .suggestion-item:hover {
+            background-color: #e5e7eb;
+            cursor: pointer;
+        }
+        .dropdown-menu {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        .markdown-content h1 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 2rem 0 1rem 0;
+            color: #1f2937;
+            text-align: center;
+        }
+        .markdown-content h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0 1rem 0;
+            color: #1f2937;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+        .markdown-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.75rem 0;
+            color: #374151;
+        }
+        .markdown-content ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin: 0.75rem 0;
+        }
+        .markdown-content li {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        .markdown-content strong {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .markdown-content p {
+            margin: 0.75rem 0;
+            line-height: 1.6;
+        }
+        .loading {
+            display: none;
+        }
+        .loading.active {
+            display: block;
+        }
+        .interest-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            margin: 0.25rem;
+            border-radius: 1rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .interest-tag:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+        }
+        .interest-tag.selected {
+            background: linear-gradient(135deg, #10b981, #059669);
+        }
+        .animate-pulse-slow {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4 font-sans">
+    <div class="w-full max-w-4xl glass-effect rounded-2xl shadow-2xl p-8">
+        <div class="text-center mb-8">
+            <h1 class="text-5xl font-extrabold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-4">
+                Enhanced College Mentor
+            </h1>
+            <p class="text-gray-600 text-lg">Your personalized academic and career guidance system</p>
+        </div>
+        
+        <!-- Form -->
+        <form id="mentorForm" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Branch Selection -->
+                <div>
+                    <label for="branch" class="block text-sm font-medium text-gray-700 mb-2">🎓 Academic Branch</label>
+                    <select id="branch" name="branch" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3" required>
+                        <option value="">Select Your Branch</option>
+                        
+                        <!-- Engineering Branches -->
+                        <optgroup label="🔧 Engineering">
+                            <option value="Computer Science Engineering">Computer Science Engineering</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Data Science & Engineering">Data Science & Engineering</option>
+                            <option value="Artificial Intelligence & ML">Artificial Intelligence & ML</option>
+                            <option value="Cybersecurity Engineering">Cybersecurity Engineering</option>
+                            <option value="Software Engineering">Software Engineering</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Mechatronics Engineering">Mechatronics Engineering</option>
+                            <option value="Automobile Engineering">Automobile Engineering</option>
+                            <option value="Electrical Engineering">Electrical Engineering</option>
+                            <option value="Electronics & Communication">Electronics & Communication</option>
+                            <option value="Electronics & Instrumentation">Electronics & Instrumentation</option>
+                            <option value="Electrical & Electronics">Electrical & Electronics</option>
+                            <option value="Civil Engineering">Civil Engineering</option>
+                            <option value="Structural Engineering">Structural Engineering</option>
+                            <option value="Transportation Engineering">Transportation Engineering</option>
+                            <option value="Chemical Engineering">Chemical Engineering</option>
+                            <option value="Petroleum Engineering">Petroleum Engineering</option>
+                            <option value="Materials Science Engineering">Materials Science Engineering</option>
+                            <option value="Aerospace Engineering">Aerospace Engineering</option>
+                            <option value="Aeronautical Engineering">Aeronautical Engineering</option>
+                            <option value="Biomedical Engineering">Biomedical Engineering</option>
+                            <option value="Biotechnology Engineering">Biotechnology Engineering</option>
+                            <option value="Environmental Engineering">Environmental Engineering</option>
+                            <option value="Food Technology">Food Technology</option>
+                            <option value="Agricultural Engineering">Agricultural Engineering</option>
+                            <option value="Marine Engineering">Marine Engineering</option>
+                            <option value="Mining Engineering">Mining Engineering</option>
+                            <option value="Metallurgical Engineering">Metallurgical Engineering</option>
+                            <option value="Textile Engineering">Textile Engineering</option>
+                            <option value="Industrial Engineering">Industrial Engineering</option>
+                            <option value="Production Engineering">Production Engineering</option>
+                            <option value="Robotics Engineering">Robotics Engineering</option>
+                            <option value="Nuclear Engineering">Nuclear Engineering</option>
+                        </optgroup>
+                        
+                        <!-- Science & Technology -->
+                        <optgroup label="🔬 Science & Technology">
+                            <option value="Computer Science">Computer Science</option>
+                            <option value="Information Science">Information Science</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Applied Mathematics">Applied Mathematics</option>
+                            <option value="Statistics">Statistics</option>
+                            <option value="Physics">Physics</option>
+                            <option value="Chemistry">Chemistry</option>
+                            <option value="Biology">Biology</option>
+                            <option value="Biotechnology">Biotechnology</option>
+                            <option value="Microbiology">Microbiology</option>
+                            <option value="Bioinformatics">Bioinformatics</option>
+                            <option value="Environmental Science">Environmental Science</option>
+                            <option value="Geology">Geology</option>
+                            <option value="Geography">Geography</option>
+                            <option value="Forensic Science">Forensic Science</option>
+                        </optgroup>
+                        
+                        <!-- Business & Management -->
+                        <optgroup label="💼 Business & Management">
+                            <option value="Business Administration">Business Administration</option>
+                            <option value="Business Analytics">Business Analytics</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Operations Management">Operations Management</option>
+                            <option value="Supply Chain Management">Supply Chain Management</option>
+                            <option value="International Business">International Business</option>
+                            <option value="Entrepreneurship">Entrepreneurship</option>
+                            <option value="E-commerce">E-commerce</option>
+                        </optgroup>
+                        
+                        <!-- Arts & Humanities -->
+                        <optgroup label="🎨 Arts & Humanities">
+                            <option value="English Literature">English Literature</option>
+                            <option value="Journalism & Mass Communication">Journalism & Mass Communication</option>
+                            <option value="Digital Media">Digital Media</option>
+                            <option value="Graphic Design">Graphic Design</option>
+                            <option value="Fine Arts">Fine Arts</option>
+                            <option value="Psychology">Psychology</option>
+                            <option value="Sociology">Sociology</option>
+                            <option value="Political Science">Political Science</option>
+                            <option value="History">History</option>
+                            <option value="Philosophy">Philosophy</option>
+                            <option value="Linguistics">Linguistics</option>
+                        </optgroup>
+                        
+                        <!-- Medical & Healthcare -->
+                        <optgroup label="🏥 Medical & Healthcare">
+                            <option value="Medicine (MBBS)">Medicine (MBBS)</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Physiotherapy">Physiotherapy</option>
+                            <option value="Occupational Therapy">Occupational Therapy</option>
+                            <option value="Medical Technology">Medical Technology</option>
+                            <option value="Public Health">Public Health</option>
+                            <option value="Nutrition & Dietetics">Nutrition & Dietetics</option>
+                        </optgroup>
+                        
+                        <!-- Law & Legal Studies -->
+                        <optgroup label="⚖️ Law & Legal Studies">
+                            <option value="Law (LLB)">Law (LLB)</option>
+                            <option value="Corporate Law">Corporate Law</option>
+                            <option value="Criminal Law">Criminal Law</option>
+                            <option value="International Law">International Law</option>
+                            <option value="Intellectual Property Law">Intellectual Property Law</option>
+                        </optgroup>
+                        
+                        <!-- Education -->
+                        <optgroup label="📚 Education">
+                            <option value="Education">Education</option>
+                            <option value="Special Education">Special Education</option>
+                            <option value="Educational Technology">Educational Technology</option>
+                            <option value="Early Childhood Education">Early Childhood Education</option>
+                        </optgroup>
+                        
+                        <!-- Architecture & Design -->
+                        <optgroup label="🏛️ Architecture & Design">
+                            <option value="Architecture">Architecture</option>
+                            <option value="Interior Design">Interior Design</option>
+                            <option value="Urban Planning">Urban Planning</option>
+                            <option value="Landscape Architecture">Landscape Architecture</option>
+                            <option value="Industrial Design">Industrial Design</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                <!-- Year Selection -->
+                <div>
+                    <label for="year" class="block text-sm font-medium text-gray-700 mb-2">📅 Current Year</label>
+                    <select id="year" name="year" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3">
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year" selected>2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                        <option value="Final Year">Final Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Interests Section -->
+            <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">💡 Your Interests</label>
+                <div class="mb-4">
+                    <div id="interestTags" class="flex flex-wrap gap-2 mb-4">
+                        <!-- Popular interest tags -->
+                        <span class="interest-tag" data-interest="Artificial Intelligence">Artificial Intelligence</span>
+                        <span class="interest-tag" data-interest="Machine Learning">Machine Learning</span>
+                        <span class="interest-tag" data-interest="Web Development">Web Development</span>
+                        <span class="interest-tag" data-interest="Mobile App Development">Mobile App Development</span>
+                        <span class="interest-tag" data-interest="Data Science">Data Science</span>
+                        <span class="interest-tag" data-interest="Cybersecurity">Cybersecurity</span>
+                        <span class="interest-tag" data-interest="Cloud Computing">Cloud Computing</span>
+                        <span class="interest-tag" data-interest="Blockchain">Blockchain</span>
+                        <span class="interest-tag" data-interest="IoT">Internet of Things</span>
+                        <span class="interest-tag" data-interest="Robotics">Robotics</span>
+                        <span class="interest-tag" data-interest="Game Development">Game Development</span>
+                        <span class="interest-tag" data-interest="UI/UX Design">UI/UX Design</span>
+                        <span class="interest-tag" data-interest="Digital Marketing">Digital Marketing</span>
+                        <span class="interest-tag" data-interest="Finance">Finance</span>
+                        <span class="interest-tag" data-interest="Research">Research</span>
+                        <span class="interest-tag" data-interest="Startups">Startups</span>
+                        <span class="interest-tag" data-interest="Innovation">Innovation</span>
+                        <span class="interest-tag" data-interest="Leadership">Leadership</span>
+                    </div>
+                </div>
+                <input type="hidden" id="interests-value" name="interests-value" required>
+                <div id="selectedInterests" class="text-sm text-gray-600 mb-2">
+                    Selected: <span id="selectedList">None selected</span>
+                </div>
+                <p class="text-xs text-gray-500">Click on tags above to select your interests, or add custom ones below</p>
+                <input type="text" id="customInterest" placeholder="Add custom interest and press Enter" 
+                       class="w-full mt-2 border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3">
+            </div>
+
+            <!-- Goals Section with Autocomplete -->
+            <div class="relative">
+                <label for="goals" class="block text-sm font-medium text-gray-700 mb-2">🎯 Career Goals</label>
+                <textarea id="goals" name="goals" rows="3" 
+                          class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 p-3" 
+                          placeholder="Describe your career aspirations and goals..." required></textarea>
+                <div id="goalsSuggestions" class="absolute z-10 w-full bg-white border border-gray-300 rounded-lg shadow-lg mt-1 dropdown-menu hidden">
+                    <!-- Suggestions will be populated here -->
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" id="submitBtn" 
+                        class="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transform transition duration-200 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+                    Get My Personalized Recommendations
+                </button>
+                <div class="loading mt-4" id="loadingIndicator">
+                    <div class="flex items-center justify-center">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600"></div>
+                        <span class="ml-3 text-indigo-600 font-medium">Generating recommendations...</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <!-- Results Section -->
+        <div id="results" class="mt-8 hidden">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold text-gray-800">📋 Your Personalized Recommendations</h2>
+                    <button id="historyBtn" class="bg-gray-500 hover:bg-gray-600 text-white px-4 py-2 rounded-lg text-sm">
+                        View History
+                    </button>
+                </div>
+                <div id="recommendationContent" class="markdown-content">
+                    <!-- Recommendations will be displayed here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- History Modal -->
+        <div id="historyModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 hidden z-50">
+            <div class="flex items-center justify-center min-h-screen p-4">
+                <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-96 overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-gray-800">📚 Recommendation History</h3>
+                            <button id="closeHistoryModal" class="text-gray-400 hover:text-gray-600">
+                                <span class="text-2xl">&times;</span>
+                            </button>
+                        </div>
+                        <div id="historyContent">
+                            <!-- History will be displayed here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="errorMessage" class="mt-4 hidden">
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+                <span id="errorText"></span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedInterests = [];
+        let suggestionTimeout;
+
+        // Interest tag functionality
+        document.getElementById('interestTags').addEventListener('click', function(e) {
+            if (e.target.classList.contains('interest-tag')) {
+                const interest = e.target.dataset.interest;
+                if (e.target.classList.contains('selected')) {
+                    // Remove interest
+                    selectedInterests = selectedInterests.filter(i => i !== interest);
+                    e.target.classList.remove('selected');
+                } else {
+                    // Add interest
+                    if (selectedInterests.length < 5) {
+                        selectedInterests.push(interest);
+                        e.target.classList.add('selected');
+                    } else {
+                        alert('You can select maximum 5 interests');
+                    }
+                }
+                updateSelectedInterests();
+            }
+        });
+
+        // Custom interest functionality
+        document.getElementById('customInterest').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                const customInterest = this.value.trim();
+                if (customInterest && selectedInterests.length < 5) {
+                    if (!selectedInterests.includes(customInterest)) {
+                        selectedInterests.push(customInterest);
+                        // Add as a tag
+                        const tag = document.createElement('span');
+                        tag.className = 'interest-tag selected';
+                        tag.dataset.interest = customInterest;
+                        tag.textContent = customInterest;
+                        document.getElementById('interestTags').appendChild(tag);
+                        updateSelectedInterests();
+                        this.value = '';
+                    }
+                } else if (selectedInterests.length >= 5) {
+                    alert('You can select maximum 5 interests');
+                }
+            }
+        });
+
+        function updateSelectedInterests() {
+            const interestsValue = document.getElementById('interests-value');
+            const selectedList = document.getElementById('selectedList');
+            
+            interestsValue.value = selectedInterests.join(', ');
+            selectedList.textContent = selectedInterests.length > 0 ? selectedInterests.join(', ') : 'None selected';
+        }
+
+        // Goals autocomplete functionality
+        document.getElementById('goals').addEventListener('input', function() {
+            clearTimeout(suggestionTimeout);
+            const query = this.value.trim();
+            
+            if (query.length > 2) {
+                suggestionTimeout = setTimeout(() => {
+                    getSuggestions('goals', query);
+                }, 300);
+            } else {
+                hideSuggestions('goals');
+            }
+        });
+
+        function getSuggestions(field, query) {
+            const formData = new FormData();
+            formData.append('field', field);
+            formData.append('query', query);
+
+            fetch('/get_suggestions', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.suggestions && data.suggestions.length > 0) {
+                    showSuggestions(field, data.suggestions);
+                } else {
+                    hideSuggestions(field);
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching suggestions:', error);
+                hideSuggestions(field);
+            });
+        }
+
+        function showSuggestions(field, suggestions) {
+            const suggestionsDiv = document.getElementById(field + 'Suggestions');
+            suggestionsDiv.innerHTML = '';
+            
+            suggestions.forEach(suggestion => {
+                const div = document.createElement('div');
+                div.className = 'suggestion-item p-3 border-b border-gray-200 hover:bg-gray-50 cursor-pointer';
+                div.textContent = suggestion;
+                div.addEventListener('click', () => {
+                    document.getElementById(field).value = suggestion;
+                    hideSuggestions(field);
+                });
+                suggestionsDiv.appendChild(div);
+            });
+            
+            suggestionsDiv.classList.remove('hidden');
+        }
+
+        function hideSuggestions(field) {
+            const suggestionsDiv = document.getElementById(field + 'Suggestions');
+            suggestionsDiv.classList.add('hidden');
+        }
+
+        // Hide suggestions when clicking outside
+        document.addEventListener('click', function(e) {
+            const goalsInput = document.getElementById('goals');
+            const goalsSuggestions = document.getElementById('goalsSuggestions');
+            
+            if (!goalsInput.contains(e.target) && !goalsSuggestions.contains(e.target)) {
+                hideSuggestions('goals');
+            }
+        });
+
+        // Form submission
+        document.getElementById('mentorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (selectedInterests.length === 0) {
+                showError('Please select at least one interest.');
+                return;
+            }
+
+            const formData = new FormData(this);
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            loadingIndicator.classList.add('active');
+            hideError();
+            
+            fetch('/get_recommendations', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    showError(data.error);
+                } else {
+                    displayRecommendations(data.recommendation);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showError('An error occurred while generating recommendations. Please try again.');
+            })
+            .finally(() => {
+                // Hide loading state
+                submitBtn.disabled = false;
+                loadingIndicator.classList.remove('active');
+            });
+        });
+
+        function displayRecommendations(recommendation) {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('recommendationContent');
+            
+            // Convert markdown to HTML
+            contentDiv.innerHTML = marked.parse(recommendation);
+            resultsDiv.classList.remove('hidden');
+            
+            // Scroll to results
+            resultsDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            errorText.textContent = message;
+            errorDiv.classList.remove('hidden');
+        }
+
+        function hideError() {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.classList.add('hidden');
+        }
+
+        // History functionality
+        document.getElementById('historyBtn').addEventListener('click', function() {
+            fetch('/get_history')
+            .then(response => response.json())
+            .then(data => {
+                displayHistory(data.history);
+            })
+            .catch(error => {
+                console.error('Error fetching history:', error);
+                showError('Error loading history.');
+            });
+        });
+
+        function displayHistory(history) {
+            const historyContent = document.getElementById('historyContent');
+            const historyModal = document.getElementById('historyModal');
+            
+            if (history.length === 0) {
+                historyContent.innerHTML = '<p class="text-gray-500 text-center py-4">No previous recommendations found.</p>';
+            } else {
+                historyContent.innerHTML = history.map((item, index) => `
+                    <div class="border-b border-gray-200 pb-4 mb-4 ${index === history.length - 1 ? 'border-b-0' : ''}">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-semibold text-gray-800">${item.branch} - ${item.created_at}</h4>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-2"><strong>Interests:</strong> ${item.interests}</p>
+                        <p class="text-sm text-gray-600 mb-2"><strong>Goals:</strong> ${item.goals.substring(0, 100)}...</p>
+                        <button onclick="showFullRecommendation('${index}')" class="text-blue-600 hover:text-blue-800 text-sm">
+                            View Full Recommendation
+                        </button>
+                    </div>
+                `).join('');
+            }
+            
+            historyModal.classList.remove('hidden');
+            
+            // Store history data for full view
+            window.historyData = history;
+        }
+
+        function showFullRecommendation(index) {
+            const recommendation = window.historyData[index].recommendation;
+            displayRecommendations(recommendation);
+            document.getElementById('historyModal').classList.add('hidden');
+        }
+
+        // Close history modal
+        document.getElementById('closeHistoryModal').addEventListener('click', function() {
+            document.getElementById('historyModal').classList.add('hidden');
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('historyModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

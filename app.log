@@ -1,0 +1,251 @@
+2025-06-10 23:32:19,029 INFO: MySQL connection pool initialized successfully
+2025-06-10 23:32:19,238 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.54:5000
+2025-06-10 23:32:19,239 INFO: [33mPress CTRL+C to quit[0m
+2025-06-10 23:32:19,311 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-10 23:32:22,090 INFO: MySQL connection pool initialized successfully
+2025-06-10 23:32:22,176 WARNING:  * Debugger is active!
+2025-06-10 23:32:22,188 INFO:  * Debugger PIN: 131-145-615
+2025-06-10 23:35:28,622 INFO: New session started: baf90c35-9bdc-4a60-8792-f5a283e4523b
+2025-06-10 23:35:28,631 INFO: 192.168.29.54 - - [10/Jun/2025 23:35:28] "GET / HTTP/1.1" 200 -
+2025-06-10 23:35:45,348 INFO: 192.168.29.54 - - [10/Jun/2025 23:35:45] "[31m[1mGET / HTTP/1.1[0m" 400 -
+2025-06-10 23:35:45,387 INFO: 192.168.29.54 - - [10/Jun/2025 23:35:45] "[33mGET /loginMsg.js HTTP/1.1[0m" 404 -
+2025-06-10 23:35:45,436 INFO: 192.168.29.54 - - [10/Jun/2025 23:35:45] "[33mGET /cgi/get.cgi?cmd=home_login HTTP/1.1[0m" 404 -
+2025-06-10 23:36:57,063 INFO: New session started: 3393cdb0-b9fa-4ae5-8fec-f708970af0f0
+2025-06-10 23:36:57,064 INFO: 127.0.0.1 - - [10/Jun/2025 23:36:57] "GET / HTTP/1.1" 200 -
+2025-06-10 23:37:08,289 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:08,290 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:08] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:08,604 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:08,605 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:08] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:10,204 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:10,206 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:10] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:16,877 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:16,883 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:16] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:18,941 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:18,942 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:18] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:20,149 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:20,150 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:20] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:21,299 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:21,301 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:21] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:22,641 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:22,643 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:22] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:22,873 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:22,874 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:22] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:24,231 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:24,231 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:24] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:24,570 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:24,571 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:24] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:25,486 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:25,492 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:25] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:26,053 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:26,054 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:26] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:26,912 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:37:26,913 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:26] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:37:31,097 INFO: Recommendation generated for session 3393cdb0-b9fa-4ae5-8fec-f708970af0f0
+2025-06-10 23:37:31,145 INFO: 127.0.0.1 - - [10/Jun/2025 23:37:31] "POST /get_recommendations HTTP/1.1" 200 -
+2025-06-10 23:43:35,410 INFO: MySQL connection pool initialized successfully
+2025-06-10 23:43:35,536 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.54:5000
+2025-06-10 23:43:35,536 INFO: [33mPress CTRL+C to quit[0m
+2025-06-10 23:43:35,552 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-10 23:43:38,954 INFO: MySQL connection pool initialized successfully
+2025-06-10 23:43:39,048 WARNING:  * Debugger is active!
+2025-06-10 23:43:39,060 INFO:  * Debugger PIN: 131-145-615
+2025-06-10 23:43:40,783 INFO: 127.0.0.1 - - [10/Jun/2025 23:43:40] "GET / HTTP/1.1" 200 -
+2025-06-10 23:44:11,876 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:11,879 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:11] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:12,033 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:12,034 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:12] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:12,344 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:12,344 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:12] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:12,644 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:12,645 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:12] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:13,254 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:13,255 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:13] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:13,680 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:13,681 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:13] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:14,411 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:14,422 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:14] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:15,108 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:15,109 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:15] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:16,409 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:16,410 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:16] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:16,803 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:16,804 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:16] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:17,463 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:17,464 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:17] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:22,775 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:22,777 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:22] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:25,346 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:25,347 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:25] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:26,273 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:26,276 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:26] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:27,005 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:27,006 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:27] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:28,471 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:28,472 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:28] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:29,229 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:44:29,230 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:29] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:44:31,777 INFO: Recommendation generated for session 3393cdb0-b9fa-4ae5-8fec-f708970af0f0
+2025-06-10 23:44:31,818 INFO: 127.0.0.1 - - [10/Jun/2025 23:44:31] "POST /get_recommendations HTTP/1.1" 200 -
+2025-06-10 23:53:45,068 INFO: MySQL connection pool initialized successfully
+2025-06-10 23:53:45,207 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.54:5000
+2025-06-10 23:53:45,207 INFO: [33mPress CTRL+C to quit[0m
+2025-06-10 23:53:45,237 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-10 23:53:48,281 INFO: MySQL connection pool initialized successfully
+2025-06-10 23:53:48,362 WARNING:  * Debugger is active!
+2025-06-10 23:53:48,408 INFO:  * Debugger PIN: 131-145-615
+2025-06-10 23:53:52,242 INFO: 127.0.0.1 - - [10/Jun/2025 23:53:52] "GET / HTTP/1.1" 200 -
+2025-06-10 23:54:01,619 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:01,621 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:01] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:02,169 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:02,170 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:02] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:02,513 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:02,514 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:02] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:06,315 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:06,316 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:06] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:07,305 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:07,307 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:07] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:07,961 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:07,962 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:07] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:17,294 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:17,295 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:17] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:17,836 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:17,837 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:17] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:17,976 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:17,977 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:17] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:19,474 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:19,475 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:19] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:20,907 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:20,908 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:20] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:21,726 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:21,726 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:21] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:21,993 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-10 23:54:21,994 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:21] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-10 23:54:24,392 INFO: Recommendation generated for session 3393cdb0-b9fa-4ae5-8fec-f708970af0f0
+2025-06-10 23:54:24,437 INFO: 127.0.0.1 - - [10/Jun/2025 23:54:24] "POST /get_recommendations HTTP/1.1" 200 -
+2025-06-10 23:57:39,139 INFO:  * Detected change in 'C:\\Users\\Apurva Singh\\Desktop\\college mentor\\app.py', reloading
+2025-06-10 23:57:42,725 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-10 23:57:46,038 INFO: MySQL connection pool initialized successfully
+2025-06-10 23:57:46,139 WARNING:  * Debugger is active!
+2025-06-10 23:57:46,150 INFO:  * Debugger PIN: 131-145-615
+2025-06-11 00:02:59,704 INFO: MySQL connection pool initialized successfully
+2025-06-11 00:02:59,832 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.54:5000
+2025-06-11 00:02:59,832 INFO: [33mPress CTRL+C to quit[0m
+2025-06-11 00:02:59,855 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-11 00:03:02,729 INFO: MySQL connection pool initialized successfully
+2025-06-11 00:03:02,809 WARNING:  * Debugger is active!
+2025-06-11 00:03:02,817 INFO:  * Debugger PIN: 131-145-615
+2025-06-11 00:03:35,121 INFO: 127.0.0.1 - - [11/Jun/2025 00:03:35] "GET / HTTP/1.1" 200 -
+2025-06-11 00:04:29,671 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:29,672 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:29] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:04:29,835 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:29,835 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:29] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:04:30,024 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:30,030 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:30] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:04:30,329 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:30,330 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:30] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:04:31,223 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:31,226 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:31] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:04:31,483 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:31,484 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:31] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:04:32,459 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:32,460 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:32] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:04:32,778 WARNING: No data found for branch: Artificial Intelligence & ML
+2025-06-11 00:04:32,782 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:32] "[33mPOST /get_recommendations HTTP/1.1[0m" 404 -
+2025-06-11 00:04:33,124 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:04:33,125 INFO: 127.0.0.1 - - [11/Jun/2025 00:04:33] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:05:33,657 INFO:  * Detected change in 'C:\\Users\\Apurva Singh\\Desktop\\college mentor\\app.py', reloading
+2025-06-11 00:05:33,659 INFO:  * Detected change in 'C:\\Users\\Apurva Singh\\Desktop\\college mentor\\app.py', reloading
+2025-06-11 00:05:36,155 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-11 00:05:39,352 INFO: MySQL connection pool initialized successfully
+2025-06-11 00:05:39,434 WARNING:  * Debugger is active!
+2025-06-11 00:05:39,441 INFO:  * Debugger PIN: 131-145-615
+2025-06-11 00:12:49,425 INFO: MySQL connection pool initialized successfully
+2025-06-11 00:12:49,541 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.54:5000
+2025-06-11 00:12:49,543 INFO: [33mPress CTRL+C to quit[0m
+2025-06-11 00:12:49,560 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-11 00:12:52,226 INFO: MySQL connection pool initialized successfully
+2025-06-11 00:12:52,304 WARNING:  * Debugger is active!
+2025-06-11 00:12:52,313 INFO:  * Debugger PIN: 131-145-615
+2025-06-11 00:15:19,148 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:19] "GET / HTTP/1.1" 200 -
+2025-06-11 00:15:33,055 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:33] "GET / HTTP/1.1" 200 -
+2025-06-11 00:15:52,571 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:15:52,572 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:52] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:15:53,225 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:15:53,226 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:53] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:15:54,035 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:15:54,044 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:54] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:15:54,302 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:15:54,302 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:54] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:15:55,158 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:15:55,161 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:55] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:15:56,079 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:15:56,080 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:56] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:15:56,876 WARNING: No data found for branch: Artificial Intelligence & ML
+2025-06-11 00:15:56,879 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:56] "[33mPOST /get_recommendations HTTP/1.1[0m" 404 -
+2025-06-11 00:15:56,997 ERROR: Error in get_suggestions: invalid syntax (<string>, line 1)
+2025-06-11 00:15:56,998 INFO: 127.0.0.1 - - [11/Jun/2025 00:15:56] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 00:22:16,938 INFO:  * Detected change in 'C:\\Users\\Apurva Singh\\Desktop\\college mentor\\app.py', reloading
+2025-06-11 00:22:20,381 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-11 00:22:24,146 INFO: MySQL connection pool initialized successfully
+2025-06-11 00:22:24,225 WARNING:  * Debugger is active!
+2025-06-11 00:22:24,233 INFO:  * Debugger PIN: 131-145-615
+2025-06-11 13:26:51,319 INFO:  * Detected change in 'C:\\Users\\Apurva Singh\\Desktop\\college mentor\\app.py', reloading
+2025-06-11 13:26:52,169 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-11 13:39:31,265 INFO: Gemini API configured successfully
+2025-06-11 13:39:31,506 INFO: MySQL connection pool initialized successfully
+2025-06-11 13:39:31,563 INFO: Database tables initialized successfully
+2025-06-11 13:39:31,566 INFO: Starting Flask application...
+2025-06-11 13:39:31,567 INFO: Gemini API: Configured
+2025-06-11 13:39:31,567 INFO: Database: Available
+2025-06-11 13:39:31,756 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.29.54:5000
+2025-06-11 13:39:31,756 INFO: [33mPress CTRL+C to quit[0m
+2025-06-11 13:39:31,870 INFO:  * Restarting with watchdog (windowsapi)
+2025-06-11 13:39:34,840 INFO: Gemini API configured successfully
+2025-06-11 13:39:34,951 INFO: MySQL connection pool initialized successfully
+2025-06-11 13:39:34,971 INFO: Database tables initialized successfully
+2025-06-11 13:39:34,975 INFO: Starting Flask application...
+2025-06-11 13:39:34,975 INFO: Gemini API: Configured
+2025-06-11 13:39:34,976 INFO: Database: Available
+2025-06-11 13:39:35,066 WARNING:  * Debugger is active!
+2025-06-11 13:39:35,079 INFO:  * Debugger PIN: 131-145-615
+2025-06-11 13:39:36,067 INFO: 127.0.0.1 - - [11/Jun/2025 13:39:36] "GET / HTTP/1.1" 200 -
+2025-06-11 13:40:10,085 INFO: Suggestions generated for goals: full
+2025-06-11 13:40:10,086 INFO: 127.0.0.1 - - [11/Jun/2025 13:40:10] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 13:40:11,217 INFO: Suggestions generated for goals: full s
+2025-06-11 13:40:11,219 INFO: 127.0.0.1 - - [11/Jun/2025 13:40:11] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 13:40:11,642 INFO: Suggestions generated for goals: full sta
+2025-06-11 13:40:11,644 INFO: 127.0.0.1 - - [11/Jun/2025 13:40:11] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 13:40:12,378 INFO: Suggestions generated for goals: full stac
+2025-06-11 13:40:12,380 INFO: 127.0.0.1 - - [11/Jun/2025 13:40:12] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 13:40:12,870 INFO: Suggestions generated for goals: full stack
+2025-06-11 13:40:12,872 INFO: 127.0.0.1 - - [11/Jun/2025 13:40:12] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 13:40:13,461 INFO: Suggestions generated for goals: full stack de
+2025-06-11 13:40:13,464 INFO: 127.0.0.1 - - [11/Jun/2025 13:40:13] "POST /get_suggestions HTTP/1.1" 200 -
+2025-06-11 13:40:23,181 INFO: Generating recommendations for Artificial Intelligence & ML student with interests: Artificial Intelligence, Machine Learning, Web Development, Research
+2025-06-11 13:40:33,569 INFO: AI recommendation generated successfully for session 3393cdb0-b9fa-4ae5-8fec-f708970af0f0
+2025-06-11 13:40:33,632 INFO: Recommendation saved to database
+2025-06-11 13:40:33,636 INFO: 127.0.0.1 - - [11/Jun/2025 13:40:33] "POST /get_recommendations HTTP/1.1" 200 -
+2025-06-11 13:41:34,206 INFO: Generating recommendations for Food Technology student with interests: Artificial Intelligence, Machine Learning, Web Development, Research
+2025-06-11 13:41:46,413 INFO: AI recommendation generated successfully for session 3393cdb0-b9fa-4ae5-8fec-f708970af0f0
+2025-06-11 13:41:46,492 INFO: Recommendation saved to database
+2025-06-11 13:41:46,494 INFO: 127.0.0.1 - - [11/Jun/2025 13:41:46] "POST /get_recommendations HTTP/1.1" 200 -
+2025-06-11 13:43:03,956 INFO: History retrieved: 5 items for session 3393cdb0-b9fa-4ae5-8fec-f708970af0f0
+2025-06-11 13:43:03,961 INFO: 127.0.0.1 - - [11/Jun/2025 13:43:03] "GET /get_history HTTP/1.1" 200 -
