@@ -11,31 +11,35 @@ MySQL Backend: Stores electives, clubs, internships, and recommendations.
 Modern UI: Built with Tailwind CSS and htmx for a responsive, dynamic interface.
 Robust Error Handling: Includes logging and fallback recommendations for database or API failures.
 
-Project Structure
+# Project Structure
 college_mentor_chatbot/
 ├── app.py                  # Flask application
+
 ├── .env                    # Environment variables (API keys)
+
 ├── requirements.txt        # Python dependencies
+
 ├── templates/
 │   └── index.html          # Frontend with embedded Tailwind CSS and htmx
+
 └── logs/
     └── app.log             # Application logs (auto-created)
 
-Prerequisites
+# Prerequisites
 
 Python 3.11+
 MySQL 8.0+
 Gemini 2.0 Flash API key
 Node.js (optional, for Tailwind CSS development)
 
-Setup Instructions
+# Setup Instructions
 
 Clone the Repository
 git clone <repository-url>
 cd college_mentor_chatbot
 
 
-Install DependenciesCreate a virtual environment and install Python packages:
+# Install DependenciesCreate a virtual environment and install Python packages:
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
@@ -50,7 +54,7 @@ Update MySQL credentials as per your setup.
 Generate a random SECRET_KEY for Flask (e.g., python -c "import secrets; print(secrets.token_hex(16))").
 
 
-Set Up MySQL Database
+# Set Up MySQL Database
 
 Ensure MySQL is running.
 Run the schema script to create tables and insert sample data:mysql -u your_mysql_user -p < database/init_db.sql
@@ -65,7 +69,7 @@ python app.py
 Access the app at http://127.0.0.1:5000.
 
 
-Usage
+# Usage
 
 Select Branch: Choose your academic branch (e.g., Computer Science, Mechanical Engineering).
 Choose Interests: Select multiple interests from the dropdown (e.g., AI, Robotics, Renewable Energy).
@@ -79,7 +83,7 @@ Action plan for immediate, medium-term, and long-term steps.
 
 View History: Click "Show Past Recommendations" to see up to 5 previous recommendations.
 
-Troubleshooting
+# Troubleshooting
 
 Gemini API Errors: Verify your API key in .env and ensure google-generativeai==0.8.3 is installed.
 MySQL Connection Issues: Check .env credentials and ensure MySQL is running. Run mysql -u your_mysql_user -p to test.
@@ -87,7 +91,7 @@ Logs Not Created: Ensure write permissions in the project directory. The logs fo
 Blank Recommendations: Check app.log for errors and ensure database tables are populated.
 Htmx/Tailwind Issues: Verify internet connectivity for CDN links or host assets locally.
 
-Future Enhancements
+# Future Enhancements
 
 User Authentication: Add Flask-Login for personalized user profiles.
 Advanced LLM Features: Summarize course syllabi or suggest skill-building resources.
@@ -95,7 +99,7 @@ Database Expansion: Include course schedules, club events, or internship deadlin
 Offline Mode: Cache recommendations for limited connectivity.
 Analytics Dashboard: Track user interactions for admin insights.
 
-Contributing
+# Contributing
 
 Fork the repository.
 Create a feature branch (git checkout -b feature/your-feature).
@@ -103,7 +107,7 @@ Commit changes (git commit -m "Add your feature").
 Push to the branch (git push origin feature/your-feature).
 Open a pull request.
 
-License
+# License
 MIT License. See LICENSE for details.
 Acknowledgments
 
